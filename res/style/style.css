@@ -272,7 +272,7 @@ h1{
 @media (max-width: 480px){
     .company__text{
     text-align: left;
-    font-size: 0.9rem;
+    font-size: 1rem;
 }
 }
 
