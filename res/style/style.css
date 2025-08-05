@@ -248,7 +248,7 @@ h1{
 }
 
 .company__text{
-     font-size: 1.5rem;
+    font-size: 1.5rem;
     line-height: 1.5;
     transition: 
         opacity 0.5s ease, 
@@ -274,17 +274,30 @@ h1{
     margin-bottom: 0;
 }
 
+@media (max-width: 480px){
+    .company__text.company__text_hidden{
+    text-align: left;
+    font-size: 1rem;
+}
+}
+
 .company__more {
     padding: 1%;
     background: transparent;
     width: auto;
     height: 3rem;
     border: var(--border-bitton);
+    border-radius: var(--border-radius);
     font-size: 1.2rem;
     cursor: pointer;
     margin-top: 10px;
     transition: transform 0.3s ease;
-    
+}
+
+@media (max-width: 480px){
+    .company__more{
+    color: var(--color-square-text);
+}
 }
 
 .company__achievements{
