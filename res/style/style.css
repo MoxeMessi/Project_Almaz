@@ -489,7 +489,7 @@ footer{
 .pit-social__item{
     font-size: 1.2rem;
     color: var(--color-subtext);
-    margin-bottom: 1.5rem;
+    margin-bottom: 1rem;
 }
 
 @media (max-width: 480px){
