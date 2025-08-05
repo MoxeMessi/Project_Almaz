@@ -65,6 +65,12 @@ main {
   padding-top: 9rem;
 }
 
+@media (max-width: 480px){
+    main {
+    padding-top: 0.5rem;
+}
+}
+
 .navigation__block{
     padding: 1% 1% 2% 1%;
     display: grid;
@@ -87,6 +93,8 @@ main {
     grid-template-columns: auto 0.1fr auto;
     column-gap: 0.5rem;
     width: 100vw;
+    position: relative;
+    margin: 0 auto;
 }
 }
 
@@ -185,7 +193,7 @@ main{
 
 @media (max-width: 480px){
     .company__image{
-    width: 98vw;
+    width: 100vw;
     height: 10vh;
 }
 }
@@ -218,12 +226,13 @@ h1{
     border: var(--border-block);
     border-radius: var(--border-radius);
     box-shadow: var(--shadow-block);
-    margin-bottom: 2%
+    margin-bottom: 1rem
 }
 
 @media (max-width: 480px){
     .company__info{
-    width: 98vw;
+    width: 100vw;
+    margin-bottom: 2rem;
 }
 }
 
@@ -297,6 +306,8 @@ h1{
 @media (max-width: 480px){
     .company__more{
     color: var(--color-square-text);
+    text-decoration: none;
+    font-size: 1rem;
 }
 }
 
