@@ -1,0 +1,674 @@
+/* сброс отступов */
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* плавная прокурутка страницы */
+html{
+    scroll-behavior: smooth;
+}
+
+/* подключение шрифтов */
+@font-face {
+    font-family: Commissioner-Regular;
+    src: local("Commissioner-Regular");
+    src: url(res/fonts/Commissioner-Regular.ttf), format('truetype');
+    font-style: normal;
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: Montserrat;
+    src: local("Montserrat");
+    src: url(res/fonts/Montserrat-VariableFont_wght.ttf) format('truetype');
+    font-style: normal;
+    font-weight: 400;
+}
+
+
+@font-face {
+    font-family: Nunito;
+    src: local("Nunito");
+    src: url(res/fonts/Nunito-Italic.ttf), format('truetype');
+    font-style: normal;
+    font-weight: 400;
+}
+
+/* определение стилей */
+:root{
+    /* цвета текста */
+    --color-primary-text:rgb(45, 58, 77);
+    --color-primary-number:rgba(0, 102, 204, 1);
+    --color-auxiliary-text:white;
+    --color-subtext: #677B8F;
+    --color-accent:#012345;
+    --color-accent-background: rgba(242, 243, 245, 0.856);
+    --color-square-text: #3E3E3E;
+    /* размеры радиуса рамки */
+    --border-block: 3px transparent solid;
+    --border-radius: 15px;
+    --border-bitton: 3px rgb(45, 58, 77) solid; 
+    /* тени блоков */
+    --shadow-block: 0 10px 30px rgba(0, 0, 0, 0.15);
+}
+
+/*Секция навигации*/
+
+.navigation{
+    font-family: 'Commissioner-Regular',sans-serif;
+    position: relative;
+}
+
+main {
+  padding-top: 9rem;
+}
+
+.navigation__block{
+    padding: 1% 1% 2% 1%;
+    display: grid;
+    grid-template-columns: 0.3fr 1fr 0.3fr;
+    grid-template-rows: auto;
+    column-gap: 1.5rem;
+    justify-items: center;
+    align-items: center;
+    width: 100%;
+    margin: 0 auto;
+    background-color: var(--color-auxiliary-text);
+    position: fixed;
+    z-index: 1000;
+    box-shadow: 0px 16px 33px 18px rgba(0, 0, 0, 0.11);
+}
+
+@media (max-width: 480px){
+    .navigation__block{
+    padding: 1.5% 1% 2% 1%;
+    grid-template-columns: auto 0.1fr auto;
+    column-gap: 0.5rem;
+    width: 100vw;
+}
+}
+
+.navigation__contacts-block{
+    display: grid;
+    grid-template-columns: 1fr;
+    row-gap: 1.2rem;
+    grid-row: auto;
+    justify-items: center;
+    align-content: center;
+    font-size: 1.1rem;
+}
+
+@media (max-width: 480px){
+    .navigation__contacts-block{
+    row-gap: 1.5rem;
+    justify-items: right;
+    align-content: center;
+    }
+}
+
+.navigation__icon{
+    width: 5rem;
+    height: auto;
+}
+
+@media (max-width: 480px){
+    .navigation__icon{
+    width: 4rem;
+}
+}
+
+.navigation__item{
+    display: inline;
+    margin-right: 2rem;
+}
+
+.navigation__item:last-child{
+    margin-right: 0;
+}
+
+.navigation__link{
+    display: inline-block;
+    text-decoration: none;
+    color: var(--color-primary-text);
+    font-size: 1.8rem;
+    border-bottom: 2.5px solid transparent; 
+    transition: border-color 0.3s ease, color 0.3s ease; 
+}
+
+.navigation__link:hover{
+    border-bottom-color: var(--color-primary-text); 
+}
+
+.navigation__telephone{
+    text-decoration: none;
+    color: var(--color-primary-number);
+    border-bottom: 2px var(--color-primary-number) solid;
+}
+
+@media (max-width: 480px){
+    .navigation__telephone{
+    font-size: 0.8rem;
+    text-decoration: none;
+}
+}
+
+
+/* секция основной информации о компании */
+
+main{
+    font-family: 'Montserrat',sans-serif;
+    color: #3E3E3E;
+    font-weight: 500;
+}
+
+.company__title{
+    position: relative;
+    display: grid;
+    padding: 0 0 1% 0;
+    grid-template-columns: 1fr;
+    width: 100%;
+    height: auto;
+    justify-items: center;
+    align-items: center;
+    font-size: 2.5rem;
+    color: var(--color-auxiliary-text);
+}
+
+.company__image{
+    width: 80%;
+    height: auto;
+    border: var(--border-block);
+    border-radius: var(--border-radius);
+}
+
+@media (max-width: 480px){
+    .company__image{
+    width: 98vw;
+    height: 10vh;
+}
+}
+ 
+h1{
+    position: absolute;
+    top: 2rem;
+    left: 14rem;
+    z-index: 10;
+    color: var(--color-auxiliary-text);
+    text-shadow: 0 0 2px rgb(247, 245, 245);
+}
+
+@media (max-width: 480px){
+    h1{
+    top: 3rem;
+    left: 1rem;
+    font-size: 1.5rem;
+}
+}
+
+.company__info{
+    display: grid;
+    padding: 1%;
+    grid-template-columns: 0.8fr ;
+    width: 80%;
+    margin: 0 auto;
+    justify-items: left;
+    align-items: center;
+    border: var(--border-block);
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow-block);
+    margin-bottom: 2%
+}
+
+@media (max-width: 480px){
+    .company__info{
+    width: 98vw;
+}
+}
+
+.company__name{
+    display: flex;
+    font-size: 1.5rem;
+    align-items: center; 
+}
+
+@media (max-width: 480px){
+    .company__name{
+    width: 100vw;
+    font-size: 1.1rem;
+    line-height: 1.2;
+}
+}
+    
+.company__logo{
+    height: 3rem;
+    margin-right: 1rem;
+    margin-bottom: 1rem;
+}
+
+.company__text{
+    font-size: 1.5rem;
+    line-height: 1.5;
+}
+
+@media (max-width: 480px){
+    .company__text{
+    text-align: left;
+    font-size: 1rem;
+}
+}
+
+.company__achievements{
+    padding: 2% 10% 1% 10%;
+    display: grid;
+    column-gap: 1.5rem;
+    justify-items: center;
+    align-items: center;
+    grid-template-columns: repeat(auto-fit, minmax(325px, 1fr));
+    grid-template-rows: auto;
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow-block);
+    background-color: var(--color-accent);
+    max-width: 80%;
+    margin: 0 auto;
+    margin-bottom: 2rem;
+}
+
+@media (max-width: 480px){
+    .company__achievements{
+    padding: 3% 2% 1% 2%;
+    column-gap: 0.5rem;
+    grid-template-columns: repeat(auto-fit, minmax(110px, 1fr));
+    max-width: 98vw;
+    height: 35vh;
+    margin-bottom: 1.5rem;
+}
+}
+
+.company__item{
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    max-width: 100%;
+    height: auto;
+}
+
+.company__icon{
+    width: 17rem;
+    height: auto;
+    margin-bottom: 1rem;
+}
+
+@media (max-width: 480px){
+    .company__icon{
+    width: 7rem;
+}
+}
+
+span{
+    font-size: 4.5rem;
+}
+
+@media (max-width: 480px){
+    span{
+    font-size: 1.5rem;
+}
+}
+   
+.company__point{
+    font-size: 2rem;
+    color: var(--color-auxiliary-text);
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+.company_description{
+    font-size: 1rem;
+    color: var(--color-subtext);
+    margin-bottom: 1.5rem;
+}
+
+@media (max-width: 480px){
+    .company_description{
+    text-align: center;
+}
+}
+    
+.company_advantages{
+    margin-bottom: 1.5rem;
+}
+
+h2{
+    font-size: 3rem;
+    font-weight: 600;
+    text-align: center;
+    color: var(--color-primary-text);
+    margin-bottom: 1rem;
+}
+
+@media (max-width: 480px){
+    h2{
+    font-size: 2rem;
+}
+}
+    
+.company_block{
+    display: grid;
+    padding: 3% 5% 3% 5%;
+    grid-template-columns: repeat(auto-fit, minmax(325px, 1fr));
+    height: auto;
+    column-gap: 2rem;
+    row-gap: 2rem ;
+    max-width: 80%;
+    margin: 0 auto;
+    background-color: var(--color-accent-background);
+    border: var(--border-block);
+    border-radius: var(--border-radius);
+}
+
+@media (max-width: 480px){
+    .company_block{
+    padding: 1%;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    column-gap: 0.5rem;
+    row-gap: 0.5rem ;
+    max-width: 98vw;
+}
+}
+
+.company_case{
+    width: 100%;
+    padding: 3%;
+    background-color: var(--color-auxiliary-text);
+    font-size: 1rem;
+}
+
+@media (max-width: 480px){
+    .company_case{
+    font-size: 0.7rem;
+}
+}
+
+.company-case__subtitle{
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+}
+
+@media (max-width: 480px){
+    .company-case__subtitle{
+    font-size: 1rem;
+}
+}
+
+.company_square{
+    margin-bottom: 0.5rem;
+}
+
+.company_square:last-child{
+    margin-bottom: 0;
+}
+
+/* подвал страницы */
+
+footer{
+    font-family: "Nunito",sans-serif;
+}
+
+.pit-page{
+    padding: 1% 1% 1% 1%;
+    display: grid;
+    max-width: 100%;
+    grid-template-columns: repeat(4,1fr);
+    grid-row: auto;
+    column-gap: 1rem;
+    background-color: var(--color-accent);
+    justify-items: center;
+}
+
+@media (max-width: 480px){
+    .pit-page{
+    padding: 3% 3% 1% 3%;
+    max-width: 100vh;
+    grid-template-columns: repeat(auto-fit,minmax(150px,1fr));
+    margin: 0 auto;
+    row-gap: 1rem;
+    justify-items: left;
+}
+}
+
+.pit__icon{
+    width: 5rem;
+    margin-bottom: 1rem;
+}
+
+.pit__company{
+    font-size: 1rem;
+    color: var(--color-subtext);
+}
+
+.pit-page__year{
+    margin-bottom: 0.5rem;
+}
+
+.pit-navigation__item{
+    margin-bottom: 1.5rem;
+    transition: transform 0.9s, ;
+}
+
+.pit-navigation__item:hover{
+    transform: scale(1.1);
+}
+
+.pit-navigation__item:last-child{
+    margin-bottom: 0;
+}
+
+.pit__transition{
+    font-size: 1.5rem;
+    color:var(--color-accent-background);
+    text-decoration: none;
+}
+
+.pit-social__title{
+    font-size: 1.5rem;
+    color: var(--color-accent-background);
+    margin-bottom: 1rem;
+}
+
+@media (max-width: 480px){
+    .pit-social__title{
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+}
+}
+
+.pit-social__item{
+    font-size: 1.2rem;
+    color: var(--color-subtext);
+    margin-bottom: 1.5rem;
+}
+
+@media (max-width: 480px){
+    .pit-social__item{
+    margin-bottom: 0.5rem;
+}
+}
+
+.pit-social__item:last-child{
+    margin-bottom: 0;
+}
+
+.pit__link{
+    text-decoration: none;
+    color: var(--color-subtext);
+}
+
+.pit__link:hover{
+    color: var(--color-accent-background);
+}
+
+.pit__telephone{
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+@media (max-width: 480px){
+    .pit__telephone{
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+}
+}
+
+.pit-contacts__number{
+    text-decoration: none;
+    color: var(--color-accent-background);
+}
+
+.pit-сontacts__item{
+    font-size: 1.2rem;
+    color: var(--color-subtext);
+    margin-bottom: 1.5rem;
+}
+
+@media (max-width: 480px){
+    .pit-сontacts__item{
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+}
+}
+
+/* секция услуг */
+
+h3{
+    font-size: 3rem;
+    font-weight: 600;
+    text-align: center;
+    color: var(--color-primary-text);
+    margin-bottom: 1rem;
+}
+
+.services__block{
+    padding: 1.5% 2% 1% 2%;
+    display: grid;
+    justify-content: center;
+    column-gap: 2.5rem;
+    align-items: top;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 0.5fr));
+    grid-template-rows: auto;
+    max-width:100%;
+    margin: 0 auto;
+    margin-bottom: 1rem;
+    
+}
+
+.services__case{
+    display: grid;
+    margin: 0 auto;
+}
+
+.services__image{
+    max-width:100%;
+    height: 350px;
+    border-radius: var(--border-radius);
+    border: transparent;
+    box-shadow: 1px 3px 19px 9px rgba(34, 60, 80, 0.24);
+    margin-bottom: 1rem;
+}
+
+.services__button{
+    max-width: 100%;
+    height: auto;
+    border: var(--border-block);
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow-block);
+    font-size: 1.5rem;
+    text-decoration: none;
+    font-weight: 400;
+    background-color: var(--color-auxiliary-text);
+    color: var(--color-accent);
+    border: var(--border-bitton);
+    margin-bottom: 1rem;
+}
+
+.services__button:hover{
+    cursor: pointer;
+    background-color: var(--color-accent);
+    color: var(--color-auxiliary-text);
+}
+
+/* секция описания услуг */
+
+.lighting-section{
+    height: auto;
+    column-gap: 2rem;
+    row-gap: 2rem ;
+    max-width: 97%;
+    margin: 0 auto;
+    background-color: var(--color-accent);
+    border: var(--border-block);
+    border-radius: var(--border-radius);
+}
+
+.lighting__text{
+    display: grid;
+    row-gap: 1rem;
+    padding: 1% 2% 1% 2%;
+    grid-template-columns: auto-fit, 0,5fr, 1.5fr;
+    grid-row: auto;
+    color: var(--color-auxiliary-text);
+}
+
+.lighting__title{
+    font-size: 2rem;
+}
+
+.lighting__description{
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    line-height: 1.2;
+}
+
+.lighting__case{
+    display: grid;
+    padding: 1%;
+    grid-template-columns: repeat(auto-fit,minmax(325px,1fr));
+    grid-row: auto;
+    row-gap: 1rem;
+    color: var(--color-auxiliary-text);
+    
+}
+
+.lighting__item{
+    display: grid;
+    padding: 1%;
+    justify-items: center;
+    max-width: 100%;
+    font-size: 1.2rem;
+    border: var(--border-block);
+    border-radius: var(--border-radius);
+}
+
+.lighting__subtitle{
+    text-align: center;
+    margin-bottom: 1.5rem;
+    font-weight: 600;
+}
+
+.lighting__icon{
+    margin-bottom: 1.5rem;
+}
+
+.lighting__point{
+    margin-bottom: 0.5rem;
+    line-height: 1.5;
+}
+
+.lighting__point:last-child{
+    margin-bottom: 0;
+}
+
+
