@@ -405,7 +405,9 @@ h2{
 }
 
 .company_square{
+    margin-left: 1rem;
     margin-bottom: 0.5rem;
+    list-style-type: square;
 }
 
 .company_square:last-child{
