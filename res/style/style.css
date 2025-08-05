@@ -232,7 +232,7 @@ h1{
 @media (max-width: 480px){
     .company__info{
     width: 100vw;
-    margin-bottom: 2rem;
+    margin-bottom: 1.5rem;
 }
 }
 
@@ -272,7 +272,7 @@ h1{
 @media (max-width: 480px){
     .company__text{
     text-align: left;
-    font-size: 1rem;
+    font-size: 0.9rem;
 }
 }
 
@@ -391,6 +391,12 @@ span{
     
 .company_advantages{
     margin-bottom: 1.5rem;
+}
+
+@media (max-width: 480px){
+    .company_advantages{
+    margin-bottom: 0rem;
+}
 }
 
 h2{
