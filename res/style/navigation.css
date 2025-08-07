@@ -1,0 +1,105 @@
+.navigation{
+    font-family: 'Commissioner-Regular',sans-serif;
+    position: relative;
+}
+
+main {
+  padding-top: 9rem;
+}
+
+@media (max-width: 480px){
+    main {
+    padding-top: 0.5rem;
+}
+}
+
+.navigation__block{
+    padding: 1% 1% 2% 1%;
+    display: grid;
+    grid-template-columns: 0.3fr 1fr 0.3fr;
+    grid-template-rows: auto;
+    column-gap: 1.5rem;
+    justify-items: center;
+    align-items: center;
+    width: 100%;
+    margin: 0 auto;
+    background-color: var(--color-auxiliary-text);
+    position: fixed;
+    z-index: 1000;
+    box-shadow: 0px 16px 33px 18px rgba(0, 0, 0, 0.11);
+}
+
+@media (max-width: 480px){
+    .navigation__block{
+    padding: 1.5% 1% 2% 1%;
+    grid-template-columns: auto 0.1fr auto;
+    column-gap: 0.5rem;
+    width: 100vw;
+    position: relative;
+    margin: 0 auto;
+}
+}
+
+.navigation__contacts-block{
+    display: grid;
+    grid-template-columns: 1fr;
+    row-gap: 1.2rem;
+    grid-row: auto;
+    justify-items: center;
+    align-content: center;
+    font-size: 1.1rem;
+}
+
+@media (max-width: 480px){
+    .navigation__contacts-block{
+    row-gap: 1.5rem;
+    justify-items: right;
+    align-content: center;
+    }
+}
+
+.navigation__icon{
+    width: 5rem;
+    height: auto;
+}
+
+@media (max-width: 480px){
+    .navigation__icon{
+    width: 4rem;
+}
+}
+
+.navigation__item{
+    display: inline;
+    margin-right: 2rem;
+}
+
+.navigation__item:last-child{
+    margin-right: 0;
+}
+
+.navigation__link{
+    display: inline-block;
+    text-decoration: none;
+    color: var(--color-primary-text);
+    font-size: 1.8rem;
+    border-bottom: 2.5px solid transparent; 
+    transition: border-color 0.3s ease, color 0.3s ease; 
+}
+
+.navigation__link:hover{
+    border-bottom-color: var(--color-primary-text); 
+}
+
+.navigation__telephone{
+    text-decoration: none;
+    color: var(--color-primary-number);
+    border-bottom: 2px var(--color-primary-number) solid;
+}
+
+@media (max-width: 480px){
+    .navigation__telephone{
+    font-size: 0.8rem;
+    text-decoration: none;
+}
+}

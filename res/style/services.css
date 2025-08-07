@@ -1,0 +1,128 @@
+/* секция услуг */
+h3{
+    font-size: 3rem;
+    font-weight: 600;
+    text-align: center;
+    color: var(--color-primary-text);
+    margin-bottom: 1rem;
+}
+
+.services__block{
+    padding: 1.5% 2% 1% 2%;
+    display: grid;
+    justify-content: center;
+    column-gap: 2.5rem;
+    align-items: top;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 0.5fr));
+    grid-template-rows: auto;
+    max-width:100%;
+    margin: 0 auto;
+    margin-bottom: 1rem;
+    
+}
+
+.services__case{
+    display: grid;
+    margin: 0 auto;
+}
+
+.services__image{
+    max-width:100%;
+    height: 350px;
+    border-radius: var(--border-radius);
+    border: transparent;
+    box-shadow: 1px 3px 19px 9px rgba(34, 60, 80, 0.24);
+    margin-bottom: 1rem;
+}
+
+.services__button{
+    max-width: 100%;
+    height: auto;
+    border: var(--border-block);
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow-block);
+    font-size: 1.5rem;
+    text-decoration: none;
+    font-weight: 400;
+    background-color: var(--color-auxiliary-text);
+    color: var(--color-accent);
+    border: var(--border-bitton);
+    margin-bottom: 1rem;
+}
+
+.services__button:hover{
+    cursor: pointer;
+    background-color: var(--color-accent);
+    color: var(--color-auxiliary-text);
+}
+
+/* секция описания услуг */
+
+.lighting-section{
+    height: auto;
+    column-gap: 2rem;
+    row-gap: 2rem ;
+    max-width: 97%;
+    margin: 0 auto;
+    background-color: var(--color-accent);
+    border: var(--border-block);
+    border-radius: var(--border-radius);
+}
+
+.lighting__text{
+    display: grid;
+    row-gap: 1rem;
+    padding: 1% 2% 1% 2%;
+    grid-template-columns: auto-fit, 0,5fr, 1.5fr;
+    grid-row: auto;
+    color: var(--color-auxiliary-text);
+}
+
+.lighting__title{
+    font-size: 2rem;
+}
+
+.lighting__description{
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    line-height: 1.2;
+}
+
+.lighting__case{
+    display: grid;
+    padding: 1%;
+    grid-template-columns: repeat(auto-fit,minmax(325px,1fr));
+    grid-row: auto;
+    row-gap: 1rem;
+    color: var(--color-auxiliary-text);
+    
+}
+
+.lighting__item{
+    display: grid;
+    padding: 1%;
+    justify-items: center;
+    max-width: 100%;
+    font-size: 1.2rem;
+    border: var(--border-block);
+    border-radius: var(--border-radius);
+}
+
+.lighting__subtitle{
+    text-align: center;
+    margin-bottom: 1.5rem;
+    font-weight: 600;
+}
+
+.lighting__icon{
+    margin-bottom: 1.5rem;
+}
+
+.lighting__point{
+    margin-bottom: 0.5rem;
+    line-height: 1.5;
+}
+
+.lighting__point:last-child{
+    margin-bottom: 0;
+}
