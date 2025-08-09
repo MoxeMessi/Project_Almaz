@@ -320,7 +320,7 @@ h2{
 @media (max-width: 480px){
     .company_block{
     padding: 1%;
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     column-gap: 0.5rem;
     row-gap: 0.5rem ;
     max-width: 98vw;
